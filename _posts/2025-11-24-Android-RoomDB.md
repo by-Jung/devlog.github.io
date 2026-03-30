@@ -12,23 +12,23 @@ permalink: /Android/RoomDB/
 toc: true
 toc_sticky: true
 
-date: 2025-03-25
+date: 2025-11-24
 last_modified_at: 2026-03-30
 ---
 
+# RoomDB 란?
 `Room Database`는 SQLite를 더 쉽게 사용할 수 있도록 도와주는 **Jetpack 라이브러리**
 - **객체 지향적인 API 제공** → SQL 문을 직접 작성하지 않고 `DAO`로 데이터를 관리 
 - **SQLite보다 간편하고 안전** → `@Entity`, `@Dao` 등의 애너테이션으로 데이터 관리 가능
 - **LiveData, Flow 지원** → 데이터 변경을 자동 감지하여 UI 업데이트 가능
 
-Room 라이브러리 아키텍처 다이어그램
-![[Pasted image 20250325115813.png]]
+## Room 라이브러리 아키텍처 다이어그램
+![choiiis github blog main](/assets/images/posts_img/Android/Room_라이브러리_아키텍처_다이어그램.png)
 ✅ **RoomDB는 SQLite보다 사용이 간편하고 안전함**  
 ✅ **DAO를 통해 SQL을 직접 작성하지 않고도 데이터 조작 가능**  
 ✅ **LiveData와 함께 사용하면 UI가 자동으로 업데이트됨**  
-✅ **백그라운드 스레드에서 DB 작업을 수행해야 함**
-![[Pasted image 20250325115938.png]]
-
+✅ **백그라운드 스레드에서 DB 작업을 수행해야 함** \
+![Android_RoomDB_설명](/assets/images/posts_img/Android/Android_RoomDB_설명.png)
 
 ## **RoomDB 기본 구조**
 ### **(1) Entity (데이터 테이블 정의)**
@@ -53,7 +53,7 @@ public class User {
 
 
 ### **(2) DAO (데이터 접근 객체)**
-``` java
+```java
 @Dao
 public interface UserDao {
     @Insert
@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
-
+```
 - **ViewModel을 통해 데이터 가져오기** → `getAllUsers().observe()`를 사용하여 UI 자동 업데이트
 - **버튼 클릭 시 데이터 삽입** → `userViewModel.insert(new User("John Doe"))`
 
