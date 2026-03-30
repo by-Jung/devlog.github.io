@@ -23,13 +23,13 @@ last_modified_at: 2026-03-30
 - **LiveData, Flow 지원** → 데이터 변경을 자동 감지하여 UI 업데이트 가능
 
 ## Room 라이브러리 아키텍처 다이어그램
-![Room_라이브러리_아키텍처_다이어그램](/assets/images/posts_img/Android/Room_라이브러리_아키텍처_다이어그램.png)
+![Room_라이브러리_아키텍처_다이어그램](https://by-jung.github.io/devlog.github.io/assets/images/posts_img/Android/Room_라이브러리_아키텍처_다이어그램.png)
 
 ✅ **RoomDB는 SQLite보다 사용이 간편하고 안전함**  
 ✅ **DAO를 통해 SQL을 직접 작성하지 않고도 데이터 조작 가능**  
 ✅ **LiveData와 함께 사용하면 UI가 자동으로 업데이트됨**  
 ✅ **백그라운드 스레드에서 DB 작업을 수행해야 함** \
-![Android_RoomDB_설명](/assets/images/posts_img/Android/Android_RoomDB_설명.png)
+![Android_RoomDB_설명](https://by-jung.github.io/devlog.github.io/assets/images/posts_img/Android/Android_RoomDB_설명.png)
 
 ## **RoomDB 기본 구조**
 ### **(1) Entity (데이터 테이블 정의)**
