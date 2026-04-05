@@ -7,7 +7,7 @@ categories:
 tags:
   - [tag1, tag2]
 
-permalink: /Network/Route 및 NAT/
+permalink: /Network/Route_NAT/
 
 toc: true
 toc_sticky: true
